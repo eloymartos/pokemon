@@ -1,0 +1,1 @@
+C:\Users\eloy\Desktop\clase\pruebicas\build\classes\kotlin\main\Pokemon.class;C:\Users\eloy\Desktop\clase\pruebicas\build\classes\kotlin\main\PokemonKt.class
