@@ -1,6 +1,8 @@
 class Pokemon(id:Int, nombre:String, vida:Int, tipo:Tipo) {
 
     var tipo :Tipo
+
+    var movimientos = arrayOf("", "", "", "")
     var id : Int = id
         get() = field
         set(value) {
