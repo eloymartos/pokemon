@@ -1,5 +1,6 @@
-class Pokemon(id:Int, nombre:String, vida:Int, tipo:String) {
+class Pokemon(id:Int, nombre:String, vida:Int, tipo:Tipo) {
 
+    var tipo :Tipo
     var id : Int = id
         get() = field
         set(value) {
@@ -15,7 +16,7 @@ class Pokemon(id:Int, nombre:String, vida:Int, tipo:String) {
             if (field <= 0) throw Exception("tas morido") else field = value
         }
 
-    var tipo :String = ""
+
 
     init {
         this.id = id

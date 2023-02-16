@@ -1,8 +1,8 @@
-class Ataque(nombre:String, tipo:String, fuerza:Int) {
+class Ataque(nombre:String, tipo:Tipo, fuerza:Int) {
 
     var nombre = ""
 
-    var tipo = ""
+    var tipo :Tipo
 
     var fuerza = 0
         get() = field
