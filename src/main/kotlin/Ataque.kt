@@ -21,8 +21,4 @@ class Ataque(nombre:String, tipo:String, fuerza:Int) {
         return "Soy el mejor ataque de todos! $nombre, tipo $tipo, con $fuerza de fuerza! "
     }
 
-    fun tipoAtaca(tipo_enemigo: String){
-        if (tipo in arrayOf("roca", "fuego"))
-    }
-
 }
