@@ -12,7 +12,7 @@ class Pokemon(id:Int, nombre:String, vida:Int, tipo:String) {
 
     var vida : Int = 0
         set(value) {
-            if (field <= 0) throw Exception("tas morido")
+            if (field <= 0) throw Exception("tas morido") else field = value
         }
 
     var tipo :String = ""
