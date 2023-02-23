@@ -13,7 +13,7 @@ class Pokemon(id:Int, nombre:String, vida:Int, tipo:Tipo) {
         }
     var nombre : String = ""
 
-    var vida : Int = 0
+    var vida : Double = 0.0
         set(value) {
             if (field <= 0) throw Exception("tas morido") else field = value
         }
@@ -23,12 +23,16 @@ class Pokemon(id:Int, nombre:String, vida:Int, tipo:Tipo) {
     init {
         this.id = id
         this.nombre = nombre
-        this.vida = vida
+        this.vida = vida.toDouble()
         this.tipo = tipo
     }
 
     override fun toString(): String {
         return "Hola, mi nombre es $nombre, y tengo $vida de vida, y soy de tipo $tipo"
+    }
+
+    fun recibirDanio(ataque: Ataque){
+        vida -= (ataque.fuerza)*(tipo.efectividad(ataque.tipo))
     }
 
 }

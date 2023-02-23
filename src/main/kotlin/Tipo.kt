@@ -48,10 +48,19 @@ class Tipo(tipo:String) {
         "veneno" to arrayOf("fantasma", "roca", "tierra", "veneno"),
         "volador" to arrayOf("acero", "electrico", "roca")
     )
-    fun efectividad(otro:Tipo):String{
-        var respuesta = ""
-        if (supereficaces[this.tipo]?.contains(otro.tipo) == true) respuesta = "SUPEREFICAZ" else{
-            if (listanomuy[this.tipo]?.contains(otro.tipo) == true) respuesta = "no muy eficaz..." else respuesta = "neutro"
+    fun efectividad(otro:Tipo):Double{
+        var respuesta = 0.0
+        if (supereficaces[this.tipo]?.contains(otro.tipo) == true) {
+            print("SUPEREFICAZ!!!!")
+            respuesta = 2.0
+        } else{
+            if (listanomuy[this.tipo]?.contains(otro.tipo) == true) {
+                print("no muy eficaz...")
+                respuesta = .5
+            } else {
+                respuesta = 1.0
+                print("neutro")
+            }
         }
         return respuesta
     }
